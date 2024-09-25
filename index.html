@@ -67,12 +67,20 @@
         /* 中间图片和链接横向排列 */
         .content {
             display: flex;
-            justify-content: space-between; /* 确保左右分布 */
-            align-items: center; /* 垂直方向居中 */
-            width: 60%; /* 控制内容的整体宽度 */
+            justify-content: space-between; /* 确保左右均匀分布 */
+            align-items: center; /* 确保内容垂直居中 */
+            width: 60%; /* 设置内容的总宽度 */
+            position: relative;
             z-index: 1;
             margin-bottom: 50px;
             text-align: center; /* 确保文字居中 */
+        }
+
+        /* 单个内容块的样式 */
+        .content div {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 确保文字和图片居中 */
         }
 
         /* 图片样式和间距 */
@@ -86,10 +94,8 @@
         .food-link {
             text-decoration: none;
             font-size: 20px;
-            display: block;
             margin-top: 10px;
             color: white;
-            text-align: center;
             font-weight: bold;
         }
 
