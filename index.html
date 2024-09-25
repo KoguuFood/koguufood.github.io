@@ -64,29 +64,28 @@
             overflow: hidden;
         }
 
-        /* 中间图片和链接居中排列 */
+        /* 中间图片和链接横向排列 */
         .content {
             display: flex;
-            justify-content: center; /* 调整为居中对齐 */
+            justify-content: space-between;
             align-items: center;
-            gap: 50px; /* 添加图片之间的间距 */
-            width: 80%; /* 调整整体内容的宽度 */
+            width: 60%;
             position: relative;
             z-index: 1;
             margin-bottom: 50px;
-            text-align: center; /* 确保文字居中 */
         }
 
         /* 图片样式和间距 */
         .content img {
             width: 300px;
             height: auto;
+            margin: 0 20px;
             border-radius: 20px;
         }
 
         /* 链接文字样式 */
         .food-link {
-            text-decoration: none; /* 移除蓝色下划线 */
+            text-decoration: none;
             font-size: 20px;
             display: block;
             margin-top: 10px;
@@ -97,11 +96,6 @@
 
         .food-link:hover {
             color: #FF6347;
-            text-decoration: none; /* 确保悬停时也没有下划线 */
-        }
-
-        .food-link:active, .food-link:visited {
-            text-decoration: none; /* 移除点击和访问后的下划线 */
         }
 
         /* 手机端优化：当屏幕宽度小于768px时 */
@@ -159,7 +153,6 @@
             .food-link {
                 font-size: 18px;
                 text-align: center;
-                text-decoration: none; /* 确保手机端也没有下划线 */
             }
         }
     </style>
