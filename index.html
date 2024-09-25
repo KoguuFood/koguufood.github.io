@@ -19,19 +19,18 @@
             align-items: center;
             position: relative;
             overflow-x: hidden;
-            color: white; /* 更改所有字体颜色为白色 */
+            color: white;
         }
 
         /* 左侧和右侧背景图片通用样式 */
         .background {
             position: absolute;
-            top: 0;
             width: 50%;
             height: 100%;
             background-size: cover;
             background-position: center;
-            filter: brightness(0.6); /* 图片稍微变暗 */
-            z-index: -1; /* 背景层，确保不会被点击 */
+            filter: brightness(0.6);
+            z-index: -1;
         }
 
         .background-left {
@@ -54,13 +53,13 @@
 
         h1 {
             font-size: 4em;
-            color: white; /* 标题字体颜色改为白色 */
+            color: white;
         }
 
         .sub-text {
             font-family: 'Lemonada', cursive;
             font-size: 1.2em;
-            color: white; /* 副标题字体颜色改为白色 */
+            color: white;
             white-space: nowrap;
             overflow: hidden;
         }
@@ -90,7 +89,7 @@
             font-size: 20px;
             display: block;
             margin-top: 10px;
-            color: white; /* 链接文字颜色改为白色 */
+            color: white;
             text-align: center;
             font-weight: bold;
         }
@@ -108,23 +107,33 @@
                 color: white;
             }
 
-            .background {
+            /* 左侧背景图片放在手机端的上半部分 */
+            .background-left {
                 width: 100%;
                 height: 50%;
+                left: 0;
+                right: 0;
+                background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/Korean_chicken.jpg?raw=true');
             }
 
-            .background-left, .background-right {
-                background-size: cover;
+            /* 右侧背景图片放在手机端的下半部分 */
+            .background-right {
+                width: 100%;
+                height: 50%;
+                top: 50%;
+                left: 0;
+                right: 0;
+                background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true');
             }
 
             .header h1 {
                 font-size: 2.5em;
-                text-align: center; /* 标题居中 */
+                text-align: center;
             }
 
             .sub-text {
                 font-size: 1em;
-                text-align: center; /* 副标题居中 */
+                text-align: center;
                 white-space: normal;
             }
 
@@ -144,11 +153,6 @@
             .food-link {
                 font-size: 18px;
                 text-align: center;
-            }
-
-            /* 修复手机端背景丢失问题，确保背景图片在手机端正确显示 */
-            .background-right {
-                background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true') !important;
             }
         }
     </style>
