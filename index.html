@@ -67,25 +67,26 @@
         /* 中间图片和链接横向排列 */
         .content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center; /* 确保内容在水平方向居中 */
+            align-items: center;     /* 垂直方向居中 */
+            gap: 40px; /* 控制图片与文字之间的间距 */
             width: 60%;
             position: relative;
             z-index: 1;
             margin-bottom: 50px;
+            text-align: center; /* 确保文字居中 */
         }
 
         /* 图片样式和间距 */
         .content img {
             width: 300px;
             height: auto;
-            margin: 0 20px;
             border-radius: 20px;
         }
 
         /* 链接文字样式 */
         .food-link {
-            text-decoration: none; /* 移除链接下划线 */
+            text-decoration: none;
             font-size: 20px;
             display: block;
             margin-top: 10px;
@@ -95,7 +96,7 @@
         }
 
         .food-link:hover {
-            color: #FF6347; /* 悬停时的颜色 */
+            color: #FF6347;
         }
 
         /* 手机端优化：当屏幕宽度小于768px时 */
@@ -153,7 +154,6 @@
             .food-link {
                 font-size: 18px;
                 text-align: center;
-                text-decoration: none; /* 移除手机端链接下划线 */
             }
         }
     </style>
