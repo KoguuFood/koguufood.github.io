@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koguu Food</title>
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* 设置页面基本样式，定义全屏背景 */
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Dancing Script', cursive; /* 浪漫风格字体 */
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -52,7 +54,8 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            margin-bottom: 30px; /* 增加底部间距 */
+            margin-bottom: 30px;
+            transform: translateY(-15px); /* 上移15px */
         }
 
         h1 {
@@ -61,7 +64,7 @@
         }
 
         .sub-text {
-            font-size: 1.2em; /* 副标题字体稍微小一点 */
+            font-size: 1.5em; /* 字体再大两号 */
             color: #555;
         }
 
@@ -73,7 +76,7 @@
             width: 60%; /* 设置中间区域宽度 */
             position: relative;
             z-index: 1; /* 保持中间内容在背景上层 */
-            margin-top: 70px; /* 图片整体下移70px */
+            transform: translateY(-70px); /* 图片整体上移70px */
         }
 
         /* 图片样式和间距 */
