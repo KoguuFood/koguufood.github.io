@@ -16,7 +16,6 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            background-color: #f5f5f5;
         }
 
         /* 左侧背景图片 */
@@ -47,17 +46,18 @@
             z-index: -1; /* 背景层，确保不会被点击 */
         }
 
-        /* 中间图片布局 */
+        /* 中间图片左右布局 */
         .content {
             display: flex;
-            justify-content: space-between; /* 左右对齐图片 */
-            width: 60%; /* 设置中间区域宽度 */
+            justify-content: space-around; /* 左右均匀分布 */
+            width: 100%; /* 设置中间区域的宽度 */
+            max-width: 1200px; /* 最大宽度 */
             position: relative;
-            z-index: 1; /* 保持中间内容在背景上层 */
+            z-index: 1; /* 保证中间内容在背景上层 */
             text-align: center;
         }
 
-        /* 图片的样式和间距 */
+        /* 图片的样式 */
         .content img {
             width: 300px; /* 图片宽度 */
             margin: 20px; /* 图片之间的距离 */
@@ -94,12 +94,14 @@
     <!-- 中间内容 -->
     <h1>欢迎来到 Koguu Food</h1>
     <div class="content">
+        <!-- 左侧图片和链接 -->
         <div>
             <a href="https://example-korean.com" target="_blank">
                 <img src="https://via.placeholder.com/300" alt="Koguu Korean Food">
                 <span class="food-link">Koguu Korean Food</span>
             </a>
         </div>
+        <!-- 右侧图片和链接 -->
         <div>
             <a href="https://example-sushi.com" target="_blank">
                 <img src="https://via.placeholder.com/300" alt="Koguu Sushi & Poke Bowls">
