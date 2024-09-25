@@ -19,6 +19,7 @@
             align-items: center;
             position: relative;
             overflow-x: hidden;
+            color: white; /* 更改所有字体颜色为白色 */
         }
 
         /* 左侧和右侧背景图片通用样式 */
@@ -52,15 +53,15 @@
         }
 
         h1 {
-            font-size: 4em; /* 标题字体加倍 */
-            color: #333;
+            font-size: 4em;
+            color: white; /* 标题字体颜色改为白色 */
         }
 
         .sub-text {
             font-family: 'Lemonada', cursive;
             font-size: 1.2em;
-            color: #555;
-            white-space: nowrap; /* 防止文字换行 */
+            color: white; /* 副标题字体颜色改为白色 */
+            white-space: nowrap;
             overflow: hidden;
         }
 
@@ -89,7 +90,7 @@
             font-size: 20px;
             display: block;
             margin-top: 10px;
-            color: #333;
+            color: white; /* 链接文字颜色改为白色 */
             text-align: center;
             font-weight: bold;
         }
@@ -101,9 +102,10 @@
         /* 手机端优化：当屏幕宽度小于768px时 */
         @media (max-width: 768px) {
             body {
-                height: auto; /* 允许页面高度动态调整 */
-                justify-content: flex-start; /* 从顶部开始布局 */
-                overflow-y: auto; /* 允许上下滚动 */
+                height: auto;
+                justify-content: flex-start;
+                overflow-y: auto;
+                color: white;
             }
 
             .background {
@@ -112,34 +114,41 @@
             }
 
             .background-left, .background-right {
-                background-size: cover; /* 确保背景图片在手机上铺满 */
+                background-size: cover;
             }
 
             .header h1 {
-                font-size: 2.5em; /* 在手机端缩小标题 */
+                font-size: 2.5em;
+                text-align: center; /* 标题居中 */
             }
 
             .sub-text {
-                font-size: 1em; /* 在手机端缩小副标题 */
-                white-space: normal; /* 允许文字换行 */
+                font-size: 1em;
+                text-align: center; /* 副标题居中 */
+                white-space: normal;
             }
 
             .content {
-                flex-direction: column; /* 在手机端垂直排列 */
-                width: 90%; /* 中间内容宽度适应手机 */
-                align-items: center; /* 居中对齐内容 */
-                margin-bottom: 20px; /* 添加底部间距 */
-                text-align: center; /* 确保图片和文字居中 */
+                flex-direction: column;
+                width: 90%;
+                align-items: center;
+                margin-bottom: 20px;
+                text-align: center;
             }
 
             .content img {
-                width: 90%; /* 手机端图片占满宽度 */
-                margin: 20px 0; /* 图片上下间距 */
+                width: 90%;
+                margin: 20px 0;
             }
 
             .food-link {
-                font-size: 18px; /* 缩小链接文字 */
-                text-align: center; /* 文字居中 */
+                font-size: 18px;
+                text-align: center;
+            }
+
+            /* 确保在手机端显示正确的背景 */
+            .background-right {
+                background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true');
             }
         }
     </style>
