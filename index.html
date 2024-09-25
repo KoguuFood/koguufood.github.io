@@ -7,7 +7,7 @@
     <!-- 引入 Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* 设置页面基本样式，定义全屏背景 */
+        /* 基本样式 */
         body {
             margin: 0;
             padding: 0;
@@ -22,7 +22,7 @@
             color: white;
         }
 
-        /* 左侧和右侧背景图片通用样式 */
+        /* 左右背景图片 */
         .background {
             position: absolute;
             width: 50%;
@@ -43,7 +43,7 @@
             background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true');
         }
 
-        /* 中间标题和副标题 */
+        /* 标题和副标题 */
         .header {
             text-align: center;
             position: relative;
@@ -64,26 +64,24 @@
             overflow: hidden;
         }
 
-        /* 中间图片和链接横向排列 */
+        /* 中间内容（桌面端左右对齐，垂直居中） */
         .content {
             display: flex;
-            justify-content: space-between; /* 确保左右均匀分布 */
-            align-items: center; /* 确保内容垂直居中 */
-            width: 60%; /* 设置内容的总宽度 */
+            justify-content: space-between; /* 左右对齐 */
+            align-items: center; /* 垂直居中 */
+            width: 60%; /* 内容的宽度 */
             position: relative;
             z-index: 1;
             margin-bottom: 50px;
-            text-align: center; /* 确保文字居中 */
         }
 
-        /* 单个内容块的样式 */
         .content div {
             display: flex;
             flex-direction: column;
-            align-items: center; /* 确保文字和图片居中 */
+            align-items: center; /* 保持图片和文字居中 */
         }
 
-        /* 图片样式和间距 */
+        /* 图片样式 */
         .content img {
             width: 300px;
             height: auto;
@@ -97,57 +95,47 @@
             margin-top: 10px;
             color: white;
             font-weight: bold;
+            text-align: center;
         }
 
         .food-link:hover {
             color: #FF6347;
         }
 
-        /* 手机端优化：当屏幕宽度小于768px时 */
+        /* 手机端优化 */
         @media (max-width: 768px) {
-            body {
-                height: auto;
-                justify-content: flex-start;
-                overflow-y: auto;
-                color: white;
-            }
-
-            /* 左侧背景图片放在手机端的上半部分 */
+            /* 左侧背景图片移动到上半部分 */
             .background-left {
                 width: 100%;
                 height: 50%;
                 left: 0;
                 right: 0;
-                background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/Korean_chicken.jpg?raw=true');
             }
 
-            /* 右侧背景图片放在手机端的下半部分 */
+            /* 右侧背景图片移动到下半部分 */
             .background-right {
                 width: 100%;
                 height: 50%;
                 top: 50%;
                 left: 0;
                 right: 0;
-                background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true');
             }
 
             .header h1 {
                 font-size: 2.5em;
-                text-align: center;
             }
 
             .sub-text {
                 font-size: 1em;
-                text-align: center;
                 white-space: normal;
             }
 
+            /* 中间内容垂直排列 */
             .content {
                 flex-direction: column;
                 width: 90%;
                 align-items: center;
                 margin-bottom: 20px;
-                text-align: center;
             }
 
             .content img {
@@ -167,7 +155,7 @@
     <div class="background background-left"></div>
     <div class="background background-right"></div>
 
-    <!-- 中间标题和副标题 -->
+    <!-- 标题和副标题 -->
     <div class="header">
         <h1>Koguu Food</h1>
         <div class="sub-text">All we want is to create 10 more special and memorable seconds for your day with your meal from us.</div>
