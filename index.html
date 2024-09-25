@@ -12,13 +12,13 @@
             margin: 0;
             padding: 0;
             font-family: 'Lora', serif; /* 主体字体设为Lora */
-            height: 100vh;
+            min-height: 100vh; /* 允许页面上下滚动 */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* 从顶部开始布局 */
             align-items: center;
             position: relative;
-            overflow: hidden;
+            overflow-x: hidden; /* 禁止左右滚动 */
         }
 
         /* 左侧和右侧背景图片通用样式 */
@@ -48,47 +48,49 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            margin-bottom: 30px;
-            transform: translateY(-50px); /* 标题整体上移20px */
+            margin-bottom: 20px;
+            margin-top: 20px; /* 确保顶部有空间 */
         }
 
         h1 {
-            font-size: 4em; /* 标题字体加倍 */
+            font-size: 3em; /* 标题字体适度缩小 */
             color: #333;
         }
 
         .sub-text {
             font-family: 'Lemonada', cursive; /* 副标题使用Lemonada字体 */
-            font-size: 1.2em; /* 字体减小 */
+            font-size: 1em; /* 副标题字体减小 */
             color: #555;
-            transform: translateY(-30px); /* 副标题上移30px */
-            white-space: nowrap; /* 强制文字不换行 */
-            overflow: hidden; /* 超出部分隐藏 */
+            width: 100%; /* 确保文字在一行显示 */
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         /* 中间图片横向排列 */
         .content {
             display: flex;
-            justify-content: space-between; /* 左右分布图片 */
+            justify-content: space-between;
             align-items: center;
             width: 60%; /* 设置中间区域宽度 */
             position: relative;
-            z-index: 1; /* 保持中间内容在背景上层 */
-            transform: translateY(-70px); /* 图片整体上移70px */
+            z-index: 1;
+            margin-bottom: 50px; /* 增加底部间距 */
+            flex-direction: column; /* 在手机端垂直排列 */
         }
 
         /* 图片样式和间距 */
         .content img {
-            width: 300px; /* 图片宽度 */
+            width: 100%; /* 图片在手机上占满宽度 */
+            max-width: 300px;
             height: auto;
-            margin: 0 20px; /* 图片之间的左右间距 */
+            margin: 20px 0; /* 调整图片的上下间距 */
             border-radius: 20px; /* 圆角边框 */
         }
 
         /* 链接文字样式 */
         .food-link {
             text-decoration: none; /* 去掉下划线 */
-            font-size: 20px;
+            font-size: 18px;
             display: block;
             margin-top: 10px;
             color: #333;
@@ -102,40 +104,37 @@
 
         /* === 手机端优化 === */
         @media (max-width: 768px) {
-            /* 调整背景图片宽度 */
+            /* 背景图片调整 */
             .background {
-                width: 100%; /* 背景图片在小屏幕上占满宽度 */
-                height: 50%; /* 调整高度 */
+                width: 100%;
+                height: 50%; /* 确保背景图片不会过大 */
             }
 
             .background-left, .background-right {
-                background-size: contain; /* 保证图片按比例缩放 */
+                background-size: contain;
             }
 
             /* 标题和副标题调整 */
             h1 {
-                font-size: 2.5em; /* 标题字体缩小 */
+                font-size: 2em; /* 在手机上进一步缩小标题字体 */
             }
 
             .sub-text {
-                font-size: 1em; /* 副标题字体进一步缩小 */
+                font-size: 1em; /* 副标题字体大小 */
                 transform: translateY(-10px); /* 调整副标题位置 */
             }
 
-            /* 调整中间内容布局 */
+            /* 中间内容布局调整 */
             .content {
-                flex-direction: column; /* 图片在手机上垂直排列 */
-                width: 80%; /* 调整中间区域宽度 */
-                transform: translateY(0); /* 移除上移 */
+                width: 90%; /* 在手机上增加内容宽度 */
             }
 
             .content img {
-                width: 100%; /* 图片在手机上占满宽度 */
-                margin: 20px 0; /* 调整图片上下间距 */
+                max-width: 90%; /* 控制图片在手机上的最大宽度 */
             }
 
             .food-link {
-                font-size: 18px; /* 文字稍微缩小 */
+                font-size: 16px; /* 缩小链接文字字体 */
             }
         }
     </style>
