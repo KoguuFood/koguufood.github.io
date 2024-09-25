@@ -21,32 +21,26 @@
             overflow: hidden;
         }
 
-        /* 左侧背景图片 */
-        .background-left {
+        /* 左侧和右侧背景图片通用样式 */
+        .background {
             position: absolute;
             top: 0;
-            left: 0;
             width: 50%;
             height: 100%;
-            background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/Korean_chicken.jpg?raw=true'); /* 替换成您左侧的图片链接 */
             background-size: cover;
             background-position: center;
             filter: brightness(0.6); /* 图片稍微变暗 */
             z-index: -1; /* 背景层，确保不会被点击 */
         }
 
-        /* 右侧背景图片 */
+        .background-left {
+            left: 0;
+            background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/Korean_chicken.jpg?raw=true');
+        }
+
         .background-right {
-            position: absolute;
-            top: 0;
             right: 0;
-            width: 50%;
-            height: 100%;
-            background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true'); /* 替换成您右侧的图片链接 */
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.6); /* 图片稍微变暗 */
-            z-index: -1; /* 背景层，确保不会被点击 */
+            background-image: url('https://github.com/KoguuFood/koguufood.github.io/blob/main/sushibanner-ezgif.com-resize%20(1).jpg?raw=true');
         }
 
         /* 中间标题和副标题 */
@@ -68,7 +62,6 @@
             font-size: 1.2em; /* 字体减小 */
             color: #555;
             transform: translateY(-30px); /* 副标题上移30px */
-            width: 100%; /* 宽度设置为100%确保一行 */
             white-space: nowrap; /* 强制文字不换行 */
             overflow: hidden; /* 超出部分隐藏 */
         }
@@ -87,19 +80,20 @@
         /* 图片样式和间距 */
         .content img {
             width: 300px; /* 图片宽度 */
+            height: auto;
             margin: 0 20px; /* 图片之间的左右间距 */
             border-radius: 20px; /* 圆角边框 */
         }
 
         /* 链接文字样式 */
         .food-link {
-            text-decoration: none;
+            text-decoration: none; /* 去掉下划线 */
             font-size: 20px;
             display: block;
             margin-top: 10px;
             color: #333;
-            text-align: center; /* 确保文字居中 */
-            font-weight: bold; /* 加粗图片下方文字 */
+            text-align: center;
+            font-weight: bold; /* 加粗文字 */
         }
 
         .food-link:hover {
@@ -109,8 +103,8 @@
 </head>
 <body>
     <!-- 左右背景图片 -->
-    <div class="background-left"></div>
-    <div class="background-right"></div>
+    <div class="background background-left"></div>
+    <div class="background background-right"></div>
 
     <!-- 中间标题和副标题 -->
     <div class="header">
@@ -120,17 +114,17 @@
 
     <!-- 中间内容 -->
     <div class="content">
-        <!-- 左侧图片和链接 -->
+        <!-- Koguu Korean Food -->
         <div>
             <a href="https://themillfoodco.com/s/koguu-korean-food/451-melwood-ave-pittsburgh/3c40faf1-c2f7-46b7-bfc9-4dff2fed2910" target="_blank">
-                <img src="https://github.com/KoguuFood/koguufood.github.io/blob/main/Korean_logo.png?raw=true">
+                <img src="https://github.com/KoguuFood/koguufood.github.io/blob/main/Korean_logo.png?raw=true" alt="Koguu Korean Food Logo">
                 <span class="food-link">Koguu Korean Food</span>
             </a>
         </div>
-        <!-- 右侧图片和链接 -->
+        <!-- Koguu Sushi & Poke Bowls -->
         <div>
             <a href="https://themillfoodco.com/s/koguu-sushi/451-melwood-ave-pittsburgh/8b83435f-2f31-4ed1-a957-08ffaecf31f8" target="_blank">
-                <img src="https://github.com/KoguuFood/koguufood.github.io/blob/main/_Sushi%20(200%20x%20200%20%E5%83%8F%E7%B4%A0).png?raw=true">
+                <img src="https://github.com/KoguuFood/koguufood.github.io/blob/main/_Sushi%20(200%20x%20200%20%E5%83%8F%E7%B4%A0).png?raw=true" alt="Koguu Sushi & Poke Bowls Logo">
                 <span class="food-link">Koguu Sushi & Poke Bowls</span>
             </a>
         </div>
