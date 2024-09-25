@@ -11,14 +11,14 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Lora', serif; /* 主体字体设为Lora */
-            min-height: 100vh; /* 允许页面上下滚动 */
+            font-family: 'Lora', serif;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* 从顶部开始布局 */
+            justify-content: center;
             align-items: center;
             position: relative;
-            overflow-x: hidden; /* 禁止左右滚动 */
+            overflow-x: hidden;
         }
 
         /* 左侧和右侧背景图片通用样式 */
@@ -48,93 +48,96 @@
             text-align: center;
             position: relative;
             z-index: 1;
-            margin-bottom: 20px;
-            margin-top: 20px; /* 确保顶部有空间 */
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 3em; /* 标题字体适度缩小 */
+            font-size: 4em; /* 标题字体加倍 */
             color: #333;
         }
 
         .sub-text {
-            font-family: 'Lemonada', cursive; /* 副标题使用Lemonada字体 */
-            font-size: 1em; /* 副标题字体减小 */
+            font-family: 'Lemonada', cursive;
+            font-size: 1.2em;
             color: #555;
-            width: 100%; /* 确保文字在一行显示 */
-            white-space: nowrap;
+            white-space: nowrap; /* 防止文字换行 */
             overflow: hidden;
         }
 
-        /* 中间图片横向排列 */
+        /* 中间图片和链接横向排列 */
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 60%; /* 设置中间区域宽度 */
+            width: 60%;
             position: relative;
             z-index: 1;
-            margin-bottom: 50px; /* 增加底部间距 */
-            flex-direction: column; /* 在手机端垂直排列 */
+            margin-bottom: 50px;
         }
 
         /* 图片样式和间距 */
         .content img {
-            width: 100%; /* 图片在手机上占满宽度 */
-            max-width: 300px;
+            width: 300px;
             height: auto;
-            margin: 20px 0; /* 调整图片的上下间距 */
-            border-radius: 20px; /* 圆角边框 */
+            margin: 0 20px;
+            border-radius: 20px;
         }
 
         /* 链接文字样式 */
         .food-link {
-            text-decoration: none; /* 去掉下划线 */
-            font-size: 18px;
+            text-decoration: none;
+            font-size: 20px;
             display: block;
             margin-top: 10px;
             color: #333;
             text-align: center;
-            font-weight: bold; /* 加粗文字 */
+            font-weight: bold;
         }
 
         .food-link:hover {
-            color: #FF6347; /* 鼠标悬停时的颜色 */
+            color: #FF6347;
         }
 
-        /* === 手机端优化 === */
+        /* 手机端优化：当屏幕宽度小于768px时 */
         @media (max-width: 768px) {
-            /* 背景图片调整 */
+            body {
+                height: auto; /* 允许页面高度动态调整 */
+                justify-content: flex-start; /* 从顶部开始布局 */
+                overflow-y: auto; /* 允许上下滚动 */
+            }
+
             .background {
                 width: 100%;
-                height: 50%; /* 确保背景图片不会过大 */
+                height: 50%;
             }
 
             .background-left, .background-right {
-                background-size: contain;
+                background-size: cover; /* 确保背景图片在手机上铺满 */
             }
 
-            /* 标题和副标题调整 */
-            h1 {
-                font-size: 2em; /* 在手机上进一步缩小标题字体 */
+            .header h1 {
+                font-size: 2.5em; /* 在手机端缩小标题 */
             }
 
             .sub-text {
-                font-size: 1em; /* 副标题字体大小 */
-                transform: translateY(-10px); /* 调整副标题位置 */
+                font-size: 1em; /* 在手机端缩小副标题 */
+                white-space: normal; /* 允许文字换行 */
             }
 
-            /* 中间内容布局调整 */
             .content {
-                width: 90%; /* 在手机上增加内容宽度 */
+                flex-direction: column; /* 在手机端垂直排列 */
+                width: 90%; /* 中间内容宽度适应手机 */
+                align-items: center; /* 居中对齐内容 */
+                margin-bottom: 20px; /* 添加底部间距 */
             }
 
             .content img {
-                max-width: 90%; /* 控制图片在手机上的最大宽度 */
+                width: 90%; /* 手机端图片占满宽度 */
+                margin: 20px 0; /* 图片上下间距 */
             }
 
             .food-link {
-                font-size: 16px; /* 缩小链接文字字体 */
+                font-size: 18px; /* 缩小链接文字 */
             }
         }
     </style>
