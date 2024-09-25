@@ -5,25 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koguu Food</title>
     <style>
+        /* 设置页面基本样式，定义全屏背景 */
         body {
-            text-align: center;
-            padding: 50px;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
-        img {
-            width: 300px;
-            margin: 20px;
+
+        /* 左侧背景图片 */
+        .background-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('https://via.placeholder.com/800x600'); /* 替换成您左侧的图片链接 */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6); /* 图片稍微变暗 */
+            z-index: -1; /* 背景层，确保不会被点击 */
+        }
+
+        /* 右侧背景图片 */
+        .background-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('https://via.placeholder.com/800x600'); /* 替换成您右侧的图片链接 */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.6); /* 图片稍微变暗 */
+            z-index: -1; /* 背景层，确保不会被点击 */
+        }
+
+        /* 中间区域 */
+        .content {
+            position: relative;
+            text-align: center;
+            z-index: 1; /* 保持中间内容在背景上层 */
+        }
+
+        /* 图片的样式和间距 */
+        .content img {
+            width: 300px; /* 图片宽度 */
+            margin: 40px; /* 图片之间的距离 */
+        }
+
+        /* 链接文字样式 */
+        .food-link {
+            text-decoration: none;
+            font-size: 20px;
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .food-link:hover {
+            color: #FF6347; /* 悬停颜色 */
         }
     </style>
 </head>
 <body>
-    <h1>欢迎来到 Koguu Food</h1>
-    <p>体验美食和浪漫时光！</p>
-    <a href="https://example1.com" target="_blank">
-        <img src="https://via.placeholder.com/300" alt="图片1">
-    </a>
-    <a href="https://example2.com" target="_blank">
-        <img src="https://via.placeholder.com/300" alt="图片2">
-    </a>
+    <!-- 左右背景图片 -->
+    <div class="background-left"></div>
+    <div class="background-right"></div>
+
+    <!-- 中间内容 -->
+    <div class="content">
+        <h1>欢迎来到 Koguu Food</h1>
+        <p>体验美食和浪漫时光！</p>
+
+        <a href="https://example-korean.com" target="_blank">
+            <img src="https://via.placeholder.com/300" alt="Koguu Korean Food">
+            <span class="food-link">Koguu Korean Food</span>
+        </a>
+
+        <a href="https://example-sushi.com" target="_blank">
+            <img src="https://via.placeholder.com/300" alt="Koguu Sushi & Poke Bowls">
+            <span class="food-link">Koguu Sushi & Poke Bowls</span>
+        </a>
+    </div>
 </body>
 </html>
