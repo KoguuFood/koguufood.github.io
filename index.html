@@ -46,21 +46,21 @@
             z-index: -1; /* 背景层，确保不会被点击 */
         }
 
-        /* 中间图片左右布局 */
+        /* 中间图片横向排列 */
         .content {
             display: flex;
-            justify-content: space-around; /* 左右均匀分布 */
-            width: 100%; /* 设置中间区域的宽度 */
-            max-width: 1200px; /* 最大宽度 */
+            justify-content: space-between; /* 左右分布图片 */
+            align-items: center;
+            width: 60%; /* 设置中间区域宽度 */
             position: relative;
-            z-index: 1; /* 保证中间内容在背景上层 */
+            z-index: 1; /* 保持中间内容在背景上层 */
             text-align: center;
         }
 
-        /* 图片的样式 */
+        /* 图片样式和间距 */
         .content img {
             width: 300px; /* 图片宽度 */
-            margin: 20px; /* 图片之间的距离 */
+            margin: 0 20px; /* 图片之间的左右间距 */
         }
 
         /* 链接文字样式 */
@@ -73,7 +73,7 @@
         }
 
         .food-link:hover {
-            color: #FF6347; /* 鼠标悬停时颜色 */
+            color: #FF6347; /* 鼠标悬停时的颜色 */
         }
 
         h1 {
