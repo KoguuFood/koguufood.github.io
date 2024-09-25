@@ -12,6 +12,7 @@
             font-family: Arial, sans-serif;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
@@ -46,6 +47,24 @@
             z-index: -1; /* 背景层，确保不会被点击 */
         }
 
+        /* 中间标题和副标题 */
+        .header {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px; /* 增加底部间距 */
+        }
+
+        h1 {
+            font-size: 4em; /* 标题字体加倍 */
+            color: #333;
+        }
+
+        .sub-text {
+            font-size: 1.2em; /* 副标题字体稍微小一点 */
+            color: #555;
+        }
+
         /* 中间图片横向排列 */
         .content {
             display: flex;
@@ -54,8 +73,7 @@
             width: 60%; /* 设置中间区域宽度 */
             position: relative;
             z-index: 1; /* 保持中间内容在背景上层 */
-            text-align: center;
-            margin-top: 70px; /* 图片下移70px */
+            margin-top: 70px; /* 图片整体下移70px */
         }
 
         /* 图片样式和间距 */
@@ -77,27 +95,6 @@
         .food-link:hover {
             color: #FF6347; /* 鼠标悬停时的颜色 */
         }
-
-        h1 {
-            position: absolute;
-            top: 5%;
-            width: 100%;
-            text-align: center;
-            font-size: 4em; /* 字体大小加倍 */
-            z-index: 1;
-            color: #333;
-        }
-
-        /* 新增的文字 */
-        .sub-text {
-            position: absolute;
-            top: 20%;
-            width: 100%;
-            text-align: center;
-            font-size: 1.2em; /* 字体稍微小一些 */
-            color: #555;
-            z-index: 1;
-        }
     </style>
 </head>
 <body>
@@ -105,10 +102,13 @@
     <div class="background-left"></div>
     <div class="background-right"></div>
 
+    <!-- 中间标题和副标题 -->
+    <div class="header">
+        <h1>欢迎来到 Koguu Food</h1>
+        <div class="sub-text">All we want is to create 10 more special and memorable seconds for your day with your meal from us.</div>
+    </div>
+
     <!-- 中间内容 -->
-    <h1>欢迎来到 Koguu Food</h1>
-    <div class="sub-text">All we want is to create 10 more special and memorable seconds for your day with your meal from us.</div>
-    
     <div class="content">
         <!-- 左侧图片和链接 -->
         <div>
