@@ -99,6 +99,45 @@
         .food-link:hover {
             color: #FF6347; /* 鼠标悬停时的颜色 */
         }
+
+        /* === 手机端优化 === */
+        @media (max-width: 768px) {
+            /* 调整背景图片宽度 */
+            .background {
+                width: 100%; /* 背景图片在小屏幕上占满宽度 */
+                height: 50%; /* 调整高度 */
+            }
+
+            .background-left, .background-right {
+                background-size: contain; /* 保证图片按比例缩放 */
+            }
+
+            /* 标题和副标题调整 */
+            h1 {
+                font-size: 2.5em; /* 标题字体缩小 */
+            }
+
+            .sub-text {
+                font-size: 1em; /* 副标题字体进一步缩小 */
+                transform: translateY(-10px); /* 调整副标题位置 */
+            }
+
+            /* 调整中间内容布局 */
+            .content {
+                flex-direction: column; /* 图片在手机上垂直排列 */
+                width: 80%; /* 调整中间区域宽度 */
+                transform: translateY(0); /* 移除上移 */
+            }
+
+            .content img {
+                width: 100%; /* 图片在手机上占满宽度 */
+                margin: 20px 0; /* 调整图片上下间距 */
+            }
+
+            .food-link {
+                font-size: 18px; /* 文字稍微缩小 */
+            }
+        }
     </style>
 </head>
 <body>
